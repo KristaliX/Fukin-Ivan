@@ -1,0 +1,2 @@
+Encrypted string : 76<1271 with key : 5
+Decrypted string : 2394724 with key : 5
