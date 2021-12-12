@@ -1,3 +1,29 @@
+def fibonacci(n):
+    """Функция принимает в качестве аргумента индекс (целое число)
+
+    Функция возвращает число Фибоначчи с этим индексом. 
+    """
+
+    if n == 0: return 0
+
+    if n in (1, 2): return 1
+
+    if n < 0: return fibonacci(n + 2) - fibonacci(n + 1)
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+def sum(*digits):
+    """Функция находит сумму переданных аргументов и возвращает её."""
+
+    try:
+        s = 0
+        for i in digits: s += i
+        return s
+    
+    except TypeError: 
+        print('Необходимо вводить только числа')
+        return
+
 def check_password(s):
     """Функция принимает в качестве аргумента строку-пароль и проверяет её на условия:
 
@@ -35,8 +61,3 @@ def check_password(s):
         print('Пароль не должен содержать "password" в любом регистре')
         return False
     return True
-
-s = 0
-s = input('Введите строку-пароль : ')
-s = check_password(s)
-print('Результат проверки вашего пароля : {}'.format(s))

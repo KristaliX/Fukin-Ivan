@@ -1,13 +1,16 @@
-def sum (*digits) :
-    try :
+def sum(*digits):
+    """Функция находит сумму переданных аргументов и возвращает её."""
+
+    try:
         s = 0
-        for i in digits : s += i
+        for i in digits: s += i
         return s
-    except TypeError : 
+    
+    except TypeError: 
         print('Необходимо вводить только числа')
         return
 
-print('Сумма равна : {}'.format(sum(1,2,3,4,5)))
-print('Сумма равна : {}'.format(sum(1,2,3)))
-print('Сумма равна : {}'.format(sum('a','b','c')))
+print('Сумма равна : {}'.format(sum(1, 2, 3, 4, 5)))
+print('Сумма равна : {}'.format(sum(1, 2, 3)))
+print('Сумма равна : {}'.format(sum('a', 'b', 'c')))
 print('Сумма равна : {}'.format(sum()))
