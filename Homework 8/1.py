@@ -5,7 +5,6 @@ class Animals:
         self.organ_system = organ_system
         self.meal = meal
         
-
     def move(self):
         print(f'{self.name} can movement')
 
